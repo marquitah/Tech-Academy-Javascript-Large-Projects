@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Pizza Menu(JS reformed)</title>
+        <link rel="stylesheet" href="PizzaDrillcss.css">
+        <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+    </head>
+    
+    
+    <body>
+        
+     <!--Pizza Heading-->   
+        <section class="pizza-menu">
+        <h1>Pizza</h1>
+        </section>
+
+    <!--Pizza Heading--> 
+        
+        
+    <!--Base Pricing-->  
+    <div class="base-additional">
+        <section class="base-pricing">
+    
+    <!--Size Dropdown-->
+    
+        <form id="pizzaform">
+            <div class="Size-Menu">
+                    <h4>Size</h4>
+                        <div id="mySize">
+                                <input type= "radio" class="size" name="size" value="Personal Pizza">Personal($6)
+                                <input type="radio" class="size" name="size" value="Medium Pizza">Medium($10)
+                                <input type="radio" class="size" name="size" value="Large Pizza">Large($14)
+                                <input type="radio" class="size" name="size" value="Extra Large Pizza">Extra Large($16)
+                        </div>
+                        
+                    </div> 
+                    
+    <!--Size Dropdown-->    
+            </section>
+    
+    
+    
+    <!--Base Pricing-->  
+    
+
+    
+    
+    
+    <!--Additional Items-->
+    
+        <section class="addl-items">
+            <h4>Additional Items</h4>
+            <p>Additional Meat Items (1st one is complimentary). $1 each additional meat item beyond the first complimentary meat item.</p>
+            <p>Addition Veggie Items (1st one is complimentary). $1 each additional veggie item beyone the first complimentary veggie item.</p>
+            <p>Extra cheese - $3.00 for any size pizza.</p>
+            <p>Crust - $3.00 for cheese stuffed crust. All other crust is complimentary</p>
+        </section>
+    </div>
+    <!--Options for Pizza--> 
+
+    <div class="container"> 
+             <div class="Menu">
+                    <h4>Meats</h4>
+                        <input id="pepperoni" class="meat" type="checkbox" name="meat" value="Pepperoni">
+                        <div class="meat">Pepperoni</div>
+                        <input id="sausage" class="meat" type="checkbox" name="meat" value="Sausage">
+                        <div class="meat">Sausage</div>
+                        <input id="canadian-bacon" class="meat" type="checkbox" name="meat" value="Canadian Bacon">
+                        <div class="meat">Canadian Bacon</div>
+                        <input id="ground-beef" class="meat" type="checkbox" name="meat" value="Ground Beef">
+                        <div class="meat">Ground Beef</div>
+                        <input id="anchovy" class="meat" type="checkbox" name="meat" value="Anchovy">
+                        <div class="meat">Anchovy</div>
+                        <input id="chicken" class="meat" type="checkbox" name="meat" value="Chicken">
+                        <div class="meat">Chicken</div>
+                    </div>
+        
+        
+
+                    <div class="Menu">
+                        <h4>Cheese</h4>
+                        <input class="cheese" id="regular" type="radio" name="cheese" value="Regular Cheese">Regular Cheese
+                        <input class="cheese" id="no-cheese" type="radio" name="cheese" value="No Cheese">No Cheese
+                        <input class="cheese" id="extra-cheese" type="radio" name="cheese" value="Extra Cheese">Extra Cheese
+                    </div>
+                    
+                
+                    
+                    
+                    <div class="Menu">
+                        <h4>Crust</h4>
+                        <input class="crust" id="plaincrust" type="radio" name="crust" value="Plain Crust">Plain Crust
+                        <input class="crust" id="garlic-butter" type="radio" name="crust" value="Garlic Butter Crust">Garlic Butter Crust
+                        <input class="crust" id="cheese-stuffed" type="radio" name="crust" value="Cheese Stuffed Crust">Cheese Stuffed Crust
+                        <input class="crust" id="spicy-crust" type="radio" name="crust" value="Spicy Crust">Spicy Crust
+                        <input class="crust" id="house-special" type="radio" name="crust" value="House Special Crust">House Special Crust
+                    </div>    
+
+                   
+                   <div class="Menu">
+                        <h4>Sauce</h4>
+                        <input class="sauce" id="marinara" type="radio" name="sauce" value="Marinara">Marinara Sauce
+                        <input class="sauce" id="white" type="radio" name="sauce" value="White">White Sauce
+                        <input class="sauce" id="barbecue" type="radio" name="sauce" value="Barbecue">Barbecue Sauce 
+                        <input class="sauce" id="no-sauce" type="radio" name="sauce" value="No Sauce">No Sauce 
+                    </div>
+
+                    
+                    <div class="Menu">
+                        <h4>Veggies</h4>
+                        <input class="veggies" id="tomatoes" type="checkbox" name="veggies" value="Tomatoes">Tomatoes 
+                        <input class="veggies" id="onions"type="checkbox" name="veggies" value="Onions">Onions 
+                        <input class="veggies" id="green-peppers" type="checkbox" name="veggies" value="Green Peppers">Green Peppers 
+                        <input class="veggies" id="mushrooms" type="checkbox" name="veggies" value="Mushrooms">Mushrooms 
+                        <input class="veggies" id="pineapple" type="checkbox" name="veggies" value="Pineapple">Pineapple 
+                        <input class="veggies" id="spinach" type="checkbox" name="veggies" value="Spinach">Spinach 
+                        <input class="veggies" id="jalapeno" type="checkbox" name="veggies" value="Jalapeno">Jalapeno 
+                    </div>
+                
+                </div>
+                
+            </form>    
+        </div>
+
+     
+    <!--Options for Pizza--> 
+         <br><br><br>
+    
+        
+        
+        <!--Order Button-->
+        
+        <div>
+            <button class="order" onclick="getReceipt()">Total</button>
+        </div>
+        
+
+        <!--Order/Cancel Buttons-->
+
+        <!--Receipt-->
+        
+        <br><br><br><br><br>
+        
+        <div id="cart">
+            <div id="showText"></div>
+            <div id="totalPrice"></div>
+        </div>
+        
+
+        <!--Receipt-->
+    
+<!--Javascript Code-->
+        <script>
+
+           
+
+           
+           function getReceipt() {
+            var text1 = "<h3>You Ordered:</h3>";
+            var runningTotal = 0;
+            var sizeTotal = 0;
+            var sizeArray = document.getElementsByClassName("size");
+            for (var i = 0; i < sizeArray.length; i++) {
+                if (sizeArray[i].checked) {
+                 var selectedSize = sizeArray[i].value;
+                text1 = text1+selectedSize+"<br>";
+                }
+            }
+                if (selectedSize === "Personal Pizza") {
+                sizeTotal = 6;
+            } else if (selectedSize === "Medium Pizza") {
+                sizeTotal = 10;
+            } else if (selectedSize === "Large Pizza") {
+                sizeTotal = 14;
+            } else if (selectedSize === "Extra Large Pizza") {
+                sizeTotal = 16;
+            }
+            runningTotal = sizeTotal;
+            console.log(selectedSize +" = $"+ sizeTotal +".00");
+            console.log("subtotal: $"+runningTotal+".00");
+            console.log(sizeTotal);
+            //document.getElementById("cart").innerHTML = ("Total: "+runningTotal);
+            //document.getElementById("cart").innerHTML = text1;
+            selectMeats(runningTotal,text1);
+            };
+           
+
+        function selectMeats(runningTotal,text1) {
+            var meatTotal = 0;
+            var selectedMeat = [];
+            var meatArray = document.getElementsByClassName("meat");
+            for (var j = 0; j < meatArray.length; j++) {
+                if (meatArray[j].checked) {
+                    selectedMeat.push(meatArray[j].value);
+                    console.log("selected meat item: ("+meatArray[j].value+")");
+                    text1 = text1+meatArray[j].value+"<br>";
+                }
+            }
+        
+            var meatCount = selectedMeat.length;
+            console.log(meatCount);
+                if (meatCount > 1) {
+                    meatTotal = (meatCount - 1);
+                } else {
+                    meatTotal = 0;
+                }
+            runningTotal = (runningTotal + meatTotal);
+            console.log("total selected meat items: "+meatCount);
+            console.log(meatCount+" meat - 1 free meat = "+"$"+meatTotal+".00");
+            console.log("Purchase Total: "+"$"+runningTotal+".00");
+            //document.getElementById("cart").innerHTML = ("Total: "+runningTotal);
+            //document.getElementById("cart").innerHTML = text1;
+            getCheese(runningTotal,text1);
+        }
+        
+            
+        function getCheese (runningTotal,text1) {
+            //var text1 = "You Ordered: ";
+           // var runningTotal = 0;
+            var cheeseTotal = 0;
+            var cheeseArray = document.getElementsByClassName("cheese"); 
+             for (var i = 0; i < cheeseArray.length; i++) {   
+                if (cheeseArray[i].checked) {
+                    var selectedCheese = cheeseArray[i].value;
+                    text1 = text1+selectedCheese+"<br>";
+                }
+            if (selectedCheese === "Extra Cheese") {
+                cheeseTotal = 3;
+            }
+            runningTotal = (runningTotal + cheeseTotal);
+            console.log(selectedCheese+" = $"+cheeseTotal+".00");
+            console.log("cheese: "+text1);
+            console.log("subtotal: $"+runningTotal+".00");
+            console.log("Purchase Total: "+"$"+runningTotal+".00");
+            //document.getElementById("cart").innerHTML = ("Total: "+runningTotal);
+            //document.getElementById("cart").innerHTML = text1;
+            getVeggies(runningTotal,text1); 
+        }
+
+        }
+
+
+        function getVeggies (runningTotal,text1) {
+            var veggieTotal = 0;
+            var selectedVeggie = [];
+            var veggieArray = document.getElementsByClassName("veggies");
+            for (var j = 0; j < veggieArray.length; j++) {
+                if (veggieArray[j].checked) {
+                    selectedVeggie.push(veggieArray[j].value);
+                    console.log("selected veggie item: ("+veggieArray[j].value+")");
+                    text1 = text1+veggieArray[j].value+"<br>";
+                }
+            }
+        
+            var veggieCount = selectedVeggie.length;
+            console.log(veggieCount);
+                if (veggieCount > 1) {
+                    veggieTotal = (veggieCount - 1);
+                } else {
+                    veggieTotal = 0;
+                }
+            runningTotal = (runningTotal + veggieTotal);
+            console.log("total selected veggie items: "+veggieCount);
+            console.log(veggieCount+" veggie - 1 free veggie = "+"$"+veggieTotal+".00");
+            console.log("Purchase Total: "+"$"+runningTotal+".00");
+            //document.getElementById("cart").innerHTML = ("Total: "+runningTotal);
+            //document.getElementById("cart").innerHTML = text1;
+            getCrust(runningTotal,text1);
+        }
+
+        function getCrust (runningTotal,text1) {
+           // var text1 = "You Ordered: ";
+           // var runningTotal = 0;
+            var crustTotal = 0;
+            var crustArray = document.getElementsByClassName("crust"); 
+             for (var i = 0; i < crustArray.length; i++) {   
+                if (crustArray[i].checked) {
+                    var selectedCrust = crustArray[i].value;
+                    text1 = text1+selectedCrust+"<br>";
+                }
+            if (selectedCrust === "Cheese Stuffed Crust") {
+                crustTotal = 1;
+            }
+            runningTotal = (runningTotal + crustTotal);
+            console.log(selectedCrust+" = $"+crustTotal+".00");
+            console.log("subtotal: $"+runningTotal+".00");
+            console.log("Purchase Total: "+"$"+runningTotal+".00"); 
+            //document.getElementById("cart").innerHTML = ("Total: "+runningTotal);
+            //document.getElementById("cart").innerHTML = text1;
+            getSauce(runningTotal,text1);
+        }
+
+        }
+
+        function getSauce (runningTotal,text1) {
+           // var text1 = "You Ordered: ";
+           // var runningTotal = 0;
+            var sauceTotal = 0;
+            var sauceArray = document.getElementsByClassName("sauce"); 
+             for (var i = 0; i < sauceArray.length; i++) {   
+                if (sauceArray[i].checked) {
+                    var selectedSauce = sauceArray[i].value;
+                    text1 = text1+selectedSauce+"<br>";
+                }
+            runningTotal = (runningTotal + sauceTotal);
+            console.log(selectedSauce+" = $"+sauceTotal+".00");
+            console.log("subtotal: $"+runningTotal+".00");
+            console.log("Purchase Total: "+"$"+runningTotal+".00"); 
+            document.getElementById("showText").innerHTML = text1;
+            document.getElementById("totalPrice").innerHTML = "<h3>Total: <strong>$"+runningTotal+".00"+"</strong></h3>";
+        }
+
+        }
+
+
+    
+
+
+    
+            
+
+
+
+
+        
+        
+        
+        
+
+                
+
+        </script>
+    
+
+
+
+
+</body>
+
+
+</html>
