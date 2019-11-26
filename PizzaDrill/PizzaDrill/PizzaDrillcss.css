@@ -1,0 +1,145 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    /* background: url("pizza.jpg"); */
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+body::after {
+    content: "";
+    background: url("pizza.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    opacity: 0.8;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+/*Pizza Heading*/
+
+.pizzaheadingbackground {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    border: black solid 5px;
+    background: white;
+    opacity: 0.8;
+    margin-top: 20px;;
+    margin-bottom: .3em;
+    margin-left: 75px;
+    padding-top: -30px;
+    float: left;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 16px;
+}
+
+.addl-items {
+    width: 700px;
+    height: 165px;
+    background-color: #FC2E2E;
+    border: solid white 5px;
+    margin-left: 325px;
+    margin-top: -145px;
+}
+
+p {
+    margin: auto;
+    padding: 10px;
+    color: black !important;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/*Pizza Heading*/
+
+
+/*Base Pricing*/
+
+.base-pricing {
+    width: 200px;
+    height: 200px;
+    border: 5px solid white;
+    border-radius: 10%;
+    background: lightgray;
+    display: inline-block;
+}
+
+.base-pricing h3 {
+    text-align: center;
+    font-size: 14px;
+}
+
+.base-pricing ul li {
+    font-size: 13px;
+}
+
+/*---Menu---*/
+
+#mySelect {
+    font-size: 12px;
+}
+
+input {
+    display: block;
+}
+
+.container {
+    
+}
+
+.Menu {
+    float: left;
+    border: solid white;
+    border-radius: 10%;
+    width: 150px;
+    height: 300px;
+    background-color: #FC2E2E;
+    font-size: 12px;
+    font-weight: bold;
+    margin-right: 10px;
+    margin-top: 245px;
+}
+
+/*---Menu---*/
+
+
+/*---Receipt Popup---*/
+
+#cart {
+    width: 250px;
+    height: 275px;
+    max-width: 275px;
+    max-height: 350px;
+    border: solid 3px red;
+    border-radius: 10%;
+    background: white;
+    font-size: 15px;
+    color: black;
+    float: left;
+    margin-top: 245px;
+    margin-left: -255px;
+    margin-right: 10px;
+    word-break: break-all;
+    padding: 20px;
+}
+
+
+/*---Receipt---*/
+
+.order {
+    height: 38px;
+    width: 100px;
+    border: solid 2px black;
+    border-radius: 10%;
+    font-weight: bold;
+    margin-left: 120px;
+    margin-top: 10px;
+}
